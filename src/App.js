@@ -1,38 +1,32 @@
-import React from 'react';
-import './App.css';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import Menu from './Menu/Menu';
-import AboutPage from './AboutPage/AboutPage';
-import LoginPage from './LoginPage/LoginPage';
-import Hero from './Hero/Hero';
-import HomePage from './HomePage/HomePage';
-import Footer from './Footer/Footer';
-
+import React from "react";
+import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Menu from "./Menu/Menu";
+import AboutPage from "./AboutPage/AboutPage";
+import LoginPage from "./LoginPage/LoginPage";
+import Hero from "./Hero/Hero";
+import HomePage from "./HomePage/HomePage";
+import Footer from "./Footer/Footer";
 
 function App() {
   return (
     <Router>
-      <Menu/>
-      <Hero/>
+      <Menu />
+      <Hero />
       <div className="mainContainer">
         <Switch>
           <Route path="/about">
-            <AboutPage/>
+            <AboutPage />
           </Route>
           <Route path="/login">
-            <LoginPage/>
+            <LoginPage />
           </Route>
           <Route path="/">
-            <HomePage/>
+            <HomePage />
           </Route>
         </Switch>
       </div>
-      <Footer/>
+      <Footer />
     </Router>
   );
 }
